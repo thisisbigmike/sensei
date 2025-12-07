@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
       >
         <div className="container mx-auto px-4 flex justify-between items-center">
           <a href="#" className="text-2xl font-bold tracking-tighter text-white">
-            SENSEI<span className="text-primary"></span>
+            SENSEI
           </a>
 
           {/* Desktop Nav */}

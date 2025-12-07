@@ -30,7 +30,6 @@ const Hero: React.FC = () => {
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4 md:mb-6"
           >
             <span className="text-white">{HERO_CONTENT.name.toUpperCase()}</span>
-            <span className="text-primary">.</span>
           </motion.h1>
 
           <motion.h2 
