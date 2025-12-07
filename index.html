@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sensei | Web3 Growth & Marketing Strategist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: 'var(--color-background)',
+              surface: 'var(--color-surface)',
+              primary: '#D9A45A', // Warm Copper Gold
+              secondary: '#5F6A63', // Muted Sage Green
+              accent: '#D9A45A', // Gold
+              
+              // Dynamic Theme Colors: These flip based on mode
+              white: 'var(--color-white)', 
+              black: 'var(--color-black)',
+              gray: {
+                100: 'var(--color-gray-100)',
+                200: 'var(--color-gray-200)',
+                300: 'var(--color-gray-300)',
+                400: 'var(--color-gray-400)',
+                500: 'var(--color-gray-500)',
+                600: 'var(--color-gray-600)',
+                700: 'var(--color-gray-700)',
+                800: 'var(--color-gray-800)',
+                900: 'var(--color-gray-900)',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-padding-top: 100px; /* Ensures anchors land below the fixed navbar */
+      }
+      
+      :root {
+        /* Dark Mode (Default) - New Palette */
+        --color-background: #0D0A0F; /* Deep Midnight Charcoal */
+        --color-surface: #1A171C; /* Slightly lighter charcoal for cards */
+        
+        --color-white: #ffffff;
+        --color-black: #000000;
+        
+        --color-gray-100: #f3f4f6;
+        --color-gray-200: #e5e7eb;
+        --color-gray-300: #d1d5db;
+        --color-gray-400: #9ca3af;
+        --color-gray-500: #6b7280;
+        --color-gray-600: #4b5563;
+        --color-gray-700: #374151;
+        --color-gray-800: #1f2937;
+        --color-gray-900: #111827;
+
+        /* Apple-style Glass UI Variables */
+        --glass-bg: rgba(255, 255, 255, 0.03);
+        --glass-border: rgba(255, 255, 255, 0.08);
+        --glass-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2);
+      }
+
+      html.light-mode {
+        /* Light Mode Overrides */
+        --color-background: #FDFBF7; /* Warm off-white */
+        --color-surface: #F2F0ED;
+        
+        /* Inverted Logic for Semantic Class Names */
+        --color-white: #0D0A0F; /* text-white becomes dark charcoal */
+        --color-black: #ffffff; /* bg-black becomes light */
+        
+        /* Inverted Grays */
+        --color-gray-100: #111827;
+        --color-gray-200: #1f2937;
+        --color-gray-300: #374151;
+        --color-gray-400: #4b5563;
+        --color-gray-500: #6b7280;
+        --color-gray-600: #9ca3af;
+        --color-gray-700: #d1d5db;
+        --color-gray-800: #e5e7eb;
+        --color-gray-900: #f3f4f6;
+
+        --glass-bg: rgba(255, 255, 255, 0.65);
+        --glass-border: rgba(255, 255, 255, 0.4);
+        --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+      }
+
+      body {
+        background-color: var(--color-background);
+        color: var(--color-white);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .glass-card {
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--glass-shadow);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .glass-card:hover {
+        transform: translateY(-4px);
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.08) 0%,
+          rgba(255, 255, 255, 0.03) 100%
+        );
+        border-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 12px 40px -4px rgba(0, 0, 0, 0.3);
+      }
+
+      html.light-mode .glass-card:hover {
+        background: rgba(255, 255, 255, 0.75);
+        border-color: rgba(255, 255, 255, 0.6);
+        box-shadow: 0 12px 40px -4px rgba(31, 38, 135, 0.1);
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--color-background);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      html.light-mode ::-webkit-scrollbar-thumb {
+        background: #ccc;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+      html.light-mode ::-webkit-scrollbar-thumb:hover {
+        background: #999;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
