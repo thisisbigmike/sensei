@@ -13,7 +13,7 @@ export const ABOUT_CONTENT = {
   role: "Founder of Apexium Agency | Global KOL Award Winner",
   description: "Building Web3 communities that scale. Creating campaigns that drive mass adoption.",
   // Using a professional abstract/tech aesthetic image as placeholder that fits the dark theme
-  image: "src/assets/images/sensei.png"
+  image: "images/sensei.png"
 };
 
 export const ACHIEVEMENTS: Achievement[] = [
